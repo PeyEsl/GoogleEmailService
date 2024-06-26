@@ -1,0 +1,204 @@
+﻿@model GoogleEmailService.Models.EmailViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="x-apple-disable-message-reformatting">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+      <style type="text/css">
+        @Html.Raw("@font-face { font-family: 'Fira Sans'; font-style: normal; font-weight: 400; src: local('Fira Sans Regular'), local('FiraSans-Regular'), url(https://fonts.gstatic.com/s/firasans/v8/va9E4kDNxMZdWfMOD5Vvl4jO.ttf) format('truetype'); }")
+        @Html.Raw("@font-face { font-family: 'Fira Sans'; font-style: normal; font-weight: 500; src: local('Fira Sans Medium'), local('FiraSans-Medium'), url(https://fonts.gstatic.com/s/firasans/v8/va9B4kDNxMZdWfMOD5VnZKveRhf_.ttf) format('truetype'); }")
+        @Html.Raw("@font-face { font-family: 'Fira Sans'; font-style: normal; font-weight: 700; src: local('Fira Sans Bold'), local('FiraSans-Bold'), url(https://fonts.gstatic.com/s/firasans/v8/va9B4kDNxMZdWfMOD5VnLK3eRhf_.ttf) format('truetype'); }")
+        @Html.Raw("@font-face { font-family: 'Fira Sans'; font-style: normal; font-weight: 800; src: local('Fira Sans ExtraBold'), local('FiraSans-ExtraBold'), url(https://fonts.gstatic.com/s/firasans/v8/va9B4kDNxMZdWfMOD5VnMK7eRhf_.ttf) format('truetype'); }")
+
+        #outlook a {
+            padding: 0;
+        }
+
+        .ExternalClass,
+        .ReadMsgBody {
+            width: 100%;
+        }
+
+        .ExternalClass,
+        .ExternalClass p,
+        .ExternalClass td,
+        .ExternalClass div,
+        .ExternalClass span,
+        .ExternalClass font {
+            line-height: 100%;
+        }
+
+        div[style*="margin: 14px 0;"],
+        div[style*="margin: 16px 0;"] {
+            margin: 0 !important;
+        }
+
+        @Html.Raw("@media only screen and (min-width:621px) { .pc-container { width: 620px !important; } }")
+
+        @Html.Raw("@media only screen and (max-width:620px) { .pc-menu-box-s3 { padding: 25px 20px !important } .pc-content-box-s2 { padding: 35px 10px 15px !important } .pc-content-box-s5 .pc-content-box-in { padding: 25px 30px 35px !important } .pc-heading-s2 .pc-heading-col { width: 100% !important } .pc-content-box-s4 { padding: 25px 10px 15px !important } .pc-footer-row-s1 .pc-footer-row-col, .pc-posts-row-s1 .pc-posts-row-col { max-width: 100% !important } .pc-footer-box-s1 { padding-left: 10px !important; padding-right: 10px !important } .pc-spacing.pc-m-footer-h-46 td, .pc-spacing.pc-m-footer-h-57 td { font-size: 20px !important; height: 20px !important; line-height: 20px !important } }")
+
+        @Html.Raw("@media only screen and (max-width:525px) { .pc-menu-box-s3 { padding: 15px 10px !important } .pc-menu-box-s3 .pc-menu-col { width: 100% !important } .pc-content-box-s2 { padding: 25px 0 5px !important } .pc-content-box-s5 .pc-content-box-in { padding: 15px 20px 25px !important } .pc-content-box-s4 { padding: 15px 0 5px !important } .pc-footer-text-s1 br, .pc-heading-text br { display: none !important } .pc-footer-box-s1 { padding: 5px 0 !important } }")
+    </style>
+  <!--[if mso]>
+  <style type=”text/css”>
+    .pc-fb-font{font-family:Helvetica,Arial,sans-serif !important;}
+  </style>
+  <![endif]-->
+  <!--[if gte mso 9]>
+  <xml>
+    <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+    </o:OfficeDocumentSettings>
+  </xml>
+  <![endif]-->
+</head>
+<body class="pc-fb-font" style="font-family: 'Fira Sans', Helvetica, Arial, sans-serif; font-size: 16px; width: 100% !important; Margin: 0 !important; padding: 0; line-height: 1.5; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; background-color: #f4f4f4" bgcolor="#f4f4f4">
+  <table style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;" width="100%" border="0" cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr>
+        <td style="padding: 0; vertical-align: top;" align="center" valign="top">
+          <!--[if (gte mso 9)|(IE)]>
+      <table width="620" align="center" border="0" cellspacing="0" cellpadding="0"><tr><td width="620" align="center" valign="top">
+      <![endif]-->
+          <table class="pc-container" align="center" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; Margin: 0 auto; max-width: 620px;" width="100%" border="0" cellpadding="0" cellspacing="0">
+            <tbody>
+              <tr>
+                <td align="left" style="vertical-align: top; padding: 0 10px;" valign="top"> <span class="preheader" style="color: transparent; display: none; height: 0; max-height: 0; max-width: 0; opacity: 0; overflow: hidden; mso-hide: all; visibility: hidden; width: 0;">This is preheader text. Some clients will show this text as a preview.</span>
+                  <table border="0" cellpadding="0" cellspacing="0" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;" width="100%">
+                    <tbody>
+                      <tr>
+                        <td style="vertical-align: top; padding: 0; height: 20px; font-size: 20px; line-height: 20px;" valign="top">&nbsp;</td>
+                      </tr>
+                    </tbody>
+                  </table>
+				  <!-- START MODULE: Content 9 -->
+                  <table border="0" cellspacing="0" cellpadding="0" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;" width="100%">
+                    <tbody>
+                      <tr>
+                        <td style="vertical-align: top; padding: 0; height: 8px; -webkit-text-size-adjust: 100%; font-size: 8px; line-height: 8px;" valign="top">&nbsp;</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;" width="100%">
+                    <tbody>
+                      <tr>
+                        <td class="pc-content-box-s5" style="vertical-align: top; background-color: #ffffff; width: 100%; border-radius: 8px; box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1)" width="100%" valign="top" bgcolor="#ffffff">
+                          <table border="0" cellpadding="0" cellspacing="0" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;" width="100%">
+                            <tbody>
+                              <tr>
+                                <td class="pc-content-box-in" style="vertical-align: top; padding: 30px 40px 40px;" valign="top">
+                                  <table border="0" cellpadding="0" cellspacing="0" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;" width="100%">
+                                    <tbody>
+                                      <tr>
+                                        <td class="pc-heading-s2" style="vertical-align: top;" valign="top">
+                                          <!--[if (gte mso 9)|(IE)]>
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td width="420" valign="top">
+                  <![endif]-->
+                                          <table class="pc-heading-col" border="0" cellpadding="0" cellspacing="0" align="left" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                                            <tbody>
+                                              <tr>
+                                                <td class="pc-fb-font" style="vertical-align: top; padding: 10px 15px 10px 0; font-family: 'Fira Sans', Helvetica, Arial, sans-serif; font-size: 24px; font-weight: 700; line-height: 1.42; letter-spacing: -0.4px; color: #151515" valign="top">Email Service</td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                          <!--[if (gte mso 9)|(IE)]>
+                  </td><td width="100" valign="top" align="right">
+                  <![endif]-->
+                                          <table class="pc-heading-col" border="0" cellpadding="0" cellspacing="0" align="right" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                                            <tbody>
+                                              <tr>
+                                                <td style="vertical-align: top; padding: 13px 0 10px;" valign="top">
+                                                  <table border="0" cellpadding="0" cellspacing="0" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;" width="100%">
+                                                    <tbody>
+                                                      <tr>
+                                                        <td align="left" style="vertical-align: top;" valign="top">
+                                                          <table border="0" cellpadding="0" cellspacing="0" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                                                            <tbody>
+                                                              <tr>
+                                                                <td style="vertical-align: top; text-align: center; background-color: transparent; border-radius: 14px;" valign="top" bgcolor="transparent" align="center"> <a class="pc-fb-font" href="@Model.CallBackUrl" style="text-decoration: none; cursor: pointer; margin: 0; white-space: nowrap; font-family: 'Fira Sans', Helvetica, Arial, sans-serif; display: inline-block; background-color: transparent; border-radius: 14px; border: 1px solid #CDCED2; font-size: 14px; font-weight: 500; color: #4B4B4B; padding: 6px 9px 6px 12px; line-height: 1;"><span>Back to Site</span></a> </td>
+                                                              </tr>
+                                                            </tbody>
+                                                          </table>
+                                                        </td>
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
+                                                </td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                          <!--[if (gte mso 9)|(IE)]>
+                  </td></tr></table>
+                  <![endif]-->
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td style="vertical-align: top;" valign="top">
+                                          <table border="0" cellpadding="0" cellspacing="0" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;" width="100%">
+                                            <tbody>
+                                              <tr>
+                                                <td style="vertical-align: top; height: 20px; font-size: 20px; line-height: 20px;" valign="top">&nbsp;</td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td style="vertical-align: top;" valign="top">
+                                          <table border="0" cellpadding="0" cellspacing="0" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;" width="100%">
+                                            <tbody>
+                                              <tr>
+                                                <td style="vertical-align: top;" valign="top"> <a href="https://www.google.com" style="text-decoration: none;">
+                          <img src="https://www.hyperstariran.com/Content/uploaded/announcement_image.jpg" width="520" height="400" alt="Img" style="border: 0; line-height: 100%; outline: 0; -ms-interpolation-mode: bicubic; display: block; height: auto; font-size: 14px; color: #151515; border-radius: 6px; max-width: 100%; font-family: 'Fira Sans', Helvetica, Arial, sans-serif;">
+                        </a> </td>
+                                              </tr>
+                                              <tr>
+                                                <td class="pc-fb-font" style="vertical-align: top; line-height: 1.43; font-family: 'Fira Sans', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 500; color: #40BE65; padding: 16px 0 0 0;" valign="top"> <a style="text-decoration: none; cursor: text; color: #afafaf">@DateTime.Now.ToLongDateString()</a> </td>
+                                              </tr>
+                                              <tr>
+                                                <td class="pc-fb-font" style="vertical-align: top; padding: 8px 0 0 0; line-height: 1.42; font-family: 'Fira Sans', Helvetica, Arial, sans-serif; font-size: 24px; font-weight: 700; letter-spacing: -0.4px; color: #151515;" valign="top"> <a href="https://www.google.com" style="text-decoration: none; color: #151515">The word "@Model.Text" has been sent.</a> </td>
+                                              </tr>
+                                              <tr>
+                                                <td class="pc-fb-font" style="vertical-align: top; padding: 10px 0 0 0; line-height: 1.56; font-family: 'Fira Sans', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 300; letter-spacing: -0.2px; color: #9B9B9B;" valign="top"> <a href="https://www.google.com" style="text-decoration: none; color: #9b9b9b">
+                                                  This text has been developed and programmed with Visual Studio 2022 and ASP.NET Core 8 MVC to test the Google email service.
+                        </a> </td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <!-- END MODULE: Content 9 -->
+				</td>
+              </tr>
+            </tbody>
+          </table>
+          <!--[if (gte mso 9)|(IE)]>
+      </td></tr></table>
+      <![endif]-->
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+
+</html>

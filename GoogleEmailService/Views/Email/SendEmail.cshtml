@@ -1,0 +1,29 @@
+﻿@model GoogleEmailService.Models.EmailViewModel
+
+@{
+    ViewData["Title"] = "Send";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Send Email</h1>
+
+<h4>Please enter your email and text:</h4>
+<hr />
+<div class="row">
+    <form asp-action="SendEmail" asp-controller="Email" method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="Email" class="control-label"></label>
+            <input asp-for="Email" class="form-control" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Text" class="control-label"></label>
+            <input asp-for="Text" class="form-control" />
+            <span asp-validation-for="Text" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Send" class="btn btn-primary mt-3" />
+        </div>
+    </form>
+</div>

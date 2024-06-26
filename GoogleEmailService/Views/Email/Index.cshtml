@@ -1,0 +1,11 @@
+﻿@model GoogleEmailService.Models.EmailViewModel
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Your Email: @Model.Email</h1>
+    <h1 class="display-4">Your Text: @Model.Text</h1>
+</div>
